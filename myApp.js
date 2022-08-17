@@ -3,7 +3,7 @@ let app = express();
 console.log("Hello World");
 app.get("/", (req, res) => {
     const absolutePath = __dirname + "/views/index.html";
-    res.send(absolutePath);
+    res.sendFile(absolutePath);
 });
 
 module.exports = app;
